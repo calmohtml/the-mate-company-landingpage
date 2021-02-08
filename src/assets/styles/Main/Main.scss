@@ -1,0 +1,60 @@
+@import "../Vars.scss";
+
+.main__container::before {
+  content: "";
+  background: {
+    image: url("../../images/mate.jpg");
+    size: cover;
+    position: center;
+  }
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: -3;
+}
+
+.main__container {
+  width: auto;
+  height: 100vh;
+  position: relative;
+  display: block;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  .main__name {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 3vw;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  .main__intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 5vh;
+    font-size: 2.5vh;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .main__name {
+    ul {
+      flex-direction: column;
+      text-align: center;
+      line-height: 6vh;
+    }
+  }
+}
